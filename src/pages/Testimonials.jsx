@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import TT from '../assets/tt.jpg';
+import TT from '../assets/TT.jpg';
 import { IoStar } from "react-icons/io5";
 
 gsap.registerPlugin(ScrollTrigger);
