@@ -5,8 +5,8 @@ const ModelViewer = ({ path }) => {
 
   useEffect(() => {
     const preventZoom = (e) => {
-      // Only prevent zoom gestures (like Ctrl + scroll or trackpad pinch)
-      if (e.ctrlKey || e.deltaY % 1 !== 0) {
+      // Only block ctrl + scroll (desktop zoom), not normal scroll
+      if (e.ctrlKey) {
         e.preventDefault();
       }
     };
@@ -32,7 +32,11 @@ const ModelViewer = ({ path }) => {
       camera-controls
       disable-zoom
       interaction-prompt="none"
-      style={{ width: "100%", height: "100%" }}
+      style={{
+        width: "100%",
+        height: "100%",
+        touchAction: "pan-y", // ✅ allows vertical scrolling on mobile
+      }}
     />
   );
 };
