@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import TT from '../assets/tt.jpg';
+import TstImg from '../assets/tt.jpg';
 import { IoStar } from "react-icons/io5";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -57,7 +57,7 @@ const Testimonials = () => {
               "The windows transformed our home into a modern masterpiece!"
             </p>
             <div className="flex items-center gap-4 mt-6">
-              <img src={TT} alt="user" className="w-12 h-12 rounded-full object-cover" />
+              <img src={TstImg} alt="user" className="w-12 h-12 rounded-full object-cover" />
               <div>
                 <h2 className="font-semibold">Monu Kumar</h2>
                 <p className="text-sm">Hometown, Dehradun</p>
